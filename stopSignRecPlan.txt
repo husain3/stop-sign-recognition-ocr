@@ -1,0 +1,23 @@
+- Inside While Loop
+	1. Extracts bigframe from video camera
+	2. Converts color image into HSV scheme
+	3. Mask with upper/lower red shade bounds (to find red blobs)
+		a. Needs improving
+			aa. for dynamic lighting conditions
+				aa1. need to adjust exposure
+				aa2. need to adapt to different warmths? (maybe?)
+	4. Find contours and save them (with their positions)
+	5. Extract areas with contours and increase size for each of them
+		a. Needs improving
+			aa. Needs a fine morphOps function (look at morphOps function from tutorial)
+	6. Convert found areas to binary black and white images (and enhance..before or after conversion?)
+	7. Run Tessaract for OCR
+
+
+
+- Current Problems
+	a. How to do depth perception to know if we're approaching a stop sign?
+		aa. Maybe get the general distance and read the vehicle speed (OBD2) and 		alert if too fast before getting to stop sign?
+		bb. Or have two lines going straight ahead and if stop sign gets closer 		to the bottom of the line at high rate of speed, sound the alarm.
+			bb1. Assumes stop sign will pass at the side of the frame.
+	b. After stop sign found, do we still need to run an algorithm to search for red 	blobs of a full picture or search general area where stop sign found?

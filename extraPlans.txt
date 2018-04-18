@@ -1,0 +1,4 @@
+- Implement stop sign functionality for speed limit signs
+- Use thermal imaging camera to...
+	a. detect animals at night and/or fog
+		aa. Use two straight lines to represent the road and check if detected animals are close or are heading close to those lines (possible sudden animal crossing)
